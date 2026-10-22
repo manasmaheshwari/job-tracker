@@ -1,0 +1,19 @@
+[project]
+name = "job-tracker"
+version = "0.1.0"
+description = "Track job applications through stages with funnel analytics"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+jobtracker = "job_tracker.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["job_tracker"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
